@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi, I'm Gavin</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #1a1a1a;
+            --link-color: #0066cc;
+            --nav-color: #333;
+        }
+
+        .dark-mode {
+            --bg-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --link-color: #6db3f2;
+            --nav-color: #e0e0e0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 2rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--nav-color);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            padding: 0.25rem;
+        }
+
+        /* Main content */
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .intro {
+            margin-bottom: 2.5rem;
+            color: var(--text-color);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section p {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 0.25rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#home">home</a>
+        <a href="#experience">experience</a>
+        <a href="#projects">projects</a>
+        <a href="#photography">photography</a>
+        <a href="#contact">contact</a>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">🌙</button>
+    </nav>
+
+    <main>
+        <h1>Hi, I'm Gavin!</h1>
+        
+        <p class="intro">
+            I'm a student at Rensselaer Polytechnic Intitute. I'm currently studying CS
+            with a concentration in ML and Data Science. I love building things that
+            intersect with my passions while helping others. When I'm not coding or doing hw,
+            you'll find me practicing guitar, playing random sports, or anything related to food.
+
+        </p>
+
+        <h2>Currently...</h2>
+
+        <section class="section">
+            <h3>Reading</h3>
+            <ul>
+                <li>The Pragmatic Programmer – Andrew Hunt & David Thomas</li>
+                <li>Clean Code – Robert C. Martin</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h3>Building</h3>
+            <p>
+                Working on personal projects, learning new frameworks, and building 
+                tools that solve real problems.
+            </p>
+        </section>
+
+        <section class="section">
+            <h3>Interested in</h3>
+            <p>
+                Interested in web development, distributed systems, and AI. Always excited to 
+                explore new ideas and learn cutting-edge technologies.
+            </p>
+        </section>
+    </main>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const btn = document.querySelector('.theme-toggle');
+            btn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+        }
+    </script>
+</body>
+</html>
