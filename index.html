@@ -3,118 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Hi, I'm Gavin</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --bg-color: #ffffff;
-            --text-color: #1a1a1a;
-            --link-color: #0066cc;
-            --nav-color: #333;
-        }
-
-        .dark-mode {
-            --bg-color: #1a1a1a;
-            --text-color: #e0e0e0;
-            --link-color: #6db3f2;
-            --nav-color: #e0e0e0;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 2rem;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        /* Navigation */
-        nav {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            color: var(--nav-color);
-            text-decoration: none;
-            font-size: 0.95rem;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .theme-toggle {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 1.2rem;
-            padding: 0.25rem;
-        }
-
-        /* Main content */
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .intro {
-            margin-bottom: 2.5rem;
-            color: var(--text-color);
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-        }
-
-        h3 {
-            font-size: 1rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            margin-top: 1.5rem;
-        }
-
-        .section {
-            margin-bottom: 2rem;
-        }
-
-        .section p {
-            margin-bottom: 0.5rem;
-        }
-
-        a {
-            color: var(--link-color);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 0.25rem;
-        }
-    </style>
 </head>
 <body>
     <nav>
@@ -127,40 +17,45 @@
     </nav>
 
     <main>
-        <h1>Hi, I'm Gavin!</h1>
+
+        <h1 class="typing-text"><span class="keyword">class</span> <span class="type">Gavin</span>:</h1>
         
         <p class="intro">
-            I'm a student at Rensselaer Polytechnic Intitute. I'm currently studying CS
-            with a concentration in ML and Data Science. I love building things that
-            intersect with my passions while helping others. When I'm not coding or doing hw,
-            you'll find me practicing guitar, playing random sports, or anything related to food.
-
+            <span class="comment">""CS and Cog Sci at Rensselaer Polytechnic Institute"""</span><br><br>
+            <span class="variable">focus_track</span> <span class="keyword">=</span> <span class="string">"Machine Learning & Data Science"</span><br>
+            <span class="variable">passion</span> <span class="keyword">=</span> <span class="string">"building creative solutions for real-world problems"</span><br>
+            <span class="variable">hobbies</span> <span class="keyword">=</span> [<span class="string">"learning guitar"</span>, <span class="string">"playing sports"</span>, <span class="string">"food"</span>]
         </p>
 
-        <h2>Currently...</h2>
+        <h2><span class="keyword">def</span> <span class="function">currently</span>(<span class="variable">self</span>):</h2>
 
         <section class="section">
-            <h3>Reading</h3>
+            <h3><span class="variable">self</span>.<span class="property">reading</span> <span class="keyword">=</span> [</h3>
             <ul>
-                <li>The Pragmatic Programmer – Andrew Hunt & David Thomas</li>
-                <li>Clean Code – Robert C. Martin</li>
+                <li><span class="string">"The Pragmatic Programmer"</span>,  <span class="comment"># Hunt & Thomas</span></li>
+                <li><span class="string">"Clean Code"</span>,  <span class="comment"># Robert C. Martin</span></li>
             </ul>
+            <h3>]</h3>
         </section>
 
         <section class="section">
-            <h3>Building</h3>
+            <h3><span class="variable">self</span>.<span class="property">building</span> <span class="keyword">=</span> {</h3>
             <p>
-                Working on personal projects, learning new frameworks, and building 
-                tools that solve real problems.
+                <span class="string">"focus"</span>: <span class="string">"personal projects"</span>,<br>
+                <span class="string">"learning"</span>: <span class="string">"new frameworks"</span>,<br>
+                <span class="string">"goal"</span>: <span class="string">"tools that solve real problems"</span>
             </p>
+            <h3>}</h3>
         </section>
 
         <section class="section">
-            <h3>Interested in</h3>
+            <h3><span class="variable">self</span>.<span class="property">interests</span> <span class="keyword">=</span> [</h3>
             <p>
-                Interested in web development, distributed systems, and AI. Always excited to 
-                explore new ideas and learn cutting-edge technologies.
+                <span class="string">"web development"</span>,<br>
+                <span class="string">"distributed systems"</span>,<br>
+                <span class="string">"artificial intelligence"</span>
             </p>
+            <h3>]</h3>
         </section>
     </main>
 
@@ -168,7 +63,7 @@
         function toggleTheme() {
             document.body.classList.toggle('dark-mode');
             const btn = document.querySelector('.theme-toggle');
-            btn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+            btn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌑';
         }
     </script>
 </body>

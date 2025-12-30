@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #f6f0e8;
+    --text-color: #1a1a1a;
+    --link-color: #0066cc;
+    --nav-color: #333;
+    --muted-color: #666;
+    
+    /* VS Code syntax colors (light theme) */
+    --keyword: #0000ff;      /* blue - if, for, function, class */
+    --string: #a31515;       /* red - strings */
+    --function: #795e26;     /* brown - function names */
+    --variable: #001080;     /* dark blue - variables */
+    --comment: #008000;      /* green - comments */
+    --type: #267f99;         /* teal - types, classes */
+    --number: #098658;       /* green - numbers */
+    --property: #881391;     /* purple - properties */
+}
+
+.dark-mode {
+    --bg-color: #1e1e1e;
+    --text-color: #d4d4d4;
+    --link-color: #6db3f2;
+    --nav-color: #e0e0e0;
+    --muted-color: #999;
+    
+    /* VS Code syntax colors (dark theme) */
+    --keyword: #569cd6;      /* blue */
+    --string: #ce9178;       /* orange */
+    --function: #dcdcaa;     /* yellow */
+    --variable: #9cdcfe;     /* light blue */
+    --comment: #6a9955;      /* green */
+    --type: #4ec9b0;         /* teal */
+    --number: #b5cea8;       /* light green */
+    --property: #c586c0;     /* pink/purple */
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem 3rem;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+}
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+nav a {
+    color: var(--nav-color);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.25rem;
+}
+
+/* Main content */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.subtitle {
+    color: var(--muted-color);
+    margin-bottom: 2.5rem;
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    margin-top: 2.5rem;
+}
+
+h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 0.25rem;
+}
+
+/* Home page */
+.intro {
+    margin-bottom: 2.5rem;
+    color: var(--text-color);
+}
+
+.section {
+    margin-bottom: 2rem;
+}
+
+.section p {
+    margin-bottom: 0.5rem;
+}
+
+/* Experience cards */
+.experience-item {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e3d1bc;
+}
+
+.dark-mode .experience-item {
+    border-bottom-color: #333;
+}
+
+.experience-item:last-child {
+    border-bottom: none;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.experience-title {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--function);
+}
+
+.experience-date {
+    font-size: 0.9rem;
+    color: var(--number);
+}
+
+.experience-company {
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+    color: var(--type);
+}
+
+.experience-location {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    color: var(--string);
+}
+
+.experience-description {
+    font-size: 0.95rem;
+}
+
+.experience-description ul {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+.experience-description li {
+    margin-bottom: 0.25rem;
+}
+
+/* Skills */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.skill-tag {
+    background-color: #f0f0f0;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.85rem;
+}
+
+.dark-mode .skill-tag {
+    background-color: #333;
+}
+
+
+.typing-text {
+  font-family: 'Courier New', Courier, monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  
+  /* Initial state */
+  width: 0;
+
+  /* Increased duration to 3.5s for a slower effect */
+  animation: typing 1.75s steps(14) forwards;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 14ch; }
+}
+
+.typing-container {
+  display: inline-block;
+}
+
+/* VS Code Syntax Highlighting */
+.keyword { color: var(--keyword); }
+.string { color: var(--string); }
+.function { color: var(--function); }
+.variable { color: var(--variable); }
+.comment { color: var(--comment); font-style: italic; }
+.type { color: var(--type); }
+.number { color: var(--number); }
+.property { color: var(--property); }
+
+/* Code-style formatting */
+.code-line {
+    display: block;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.code-line::before {
+    content: attr(data-line);
+    position: absolute;
+    left: 0;
+    color: var(--muted-color);
+    opacity: 0.5;
+    font-size: 0.85em;
+}

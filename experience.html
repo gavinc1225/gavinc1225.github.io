@@ -3,170 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Experience | Gavin</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --bg-color: #ffffff;
-            --text-color: #1a1a1a;
-            --link-color: #0066cc;
-            --nav-color: #333;
-            --muted-color: #666;
-        }
-
-        .dark-mode {
-            --bg-color: #1a1a1a;
-            --text-color: #e0e0e0;
-            --link-color: #6db3f2;
-            --nav-color: #e0e0e0;
-            --muted-color: #999;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 2rem;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        /* Navigation */
-        nav {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            gap: 1.5rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            color: var(--nav-color);
-            text-decoration: none;
-            font-size: 0.95rem;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .theme-toggle {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 1.2rem;
-            padding: 0.25rem;
-        }
-
-        /* Main content */
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .subtitle {
-            color: var(--muted-color);
-            margin-bottom: 2.5rem;
-        }
-
-        h2 {
-            font-size: 1.25rem;
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-            margin-top: 2.5rem;
-        }
-
-        a {
-            color: var(--link-color);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* Experience cards */
-        .experience-item {
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid #eee;
-        }
-
-        .dark-mode .experience-item {
-            border-bottom-color: #333;
-        }
-
-        .experience-item:last-child {
-            border-bottom: none;
-        }
-
-        .experience-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .experience-title {
-            font-weight: 600;
-            font-size: 1rem;
-        }
-
-        .experience-date {
-            color: var(--muted-color);
-            font-size: 0.9rem;
-        }
-
-        .experience-company {
-            color: var(--muted-color);
-            font-size: 0.95rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .experience-description {
-            font-size: 0.95rem;
-        }
-
-        .experience-description ul {
-            list-style: disc;
-            padding-left: 1.25rem;
-            margin-top: 0.5rem;
-        }
-
-        .experience-description li {
-            margin-bottom: 0.25rem;
-        }
-
-        /* Skills */
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-
-        .skill-tag {
-            background-color: #f0f0f0;
-            padding: 0.25rem 0.75rem;
-            border-radius: 1rem;
-            font-size: 0.85rem;
-        }
-
-        .dark-mode .skill-tag {
-            background-color: #333;
-        }
-    </style>
 </head>
 <body>
     <nav>
@@ -179,35 +17,18 @@
     </nav>
 
     <main>
-        <h1>Experience</h1>
-        <p class="subtitle">My professional journey so far</p>
+        <h1><span class="keyword">class</span> <span class="type">Experience</span>:</h1>
 
-        <h2>Work Experience</h2>
-
-        <div class="experience-item">
-            <div class="experience-header">
-                <span class="experience-title">Research Technology Intern</span>
-                <span class="experience-date">Summer 2025</span>
-            </div>
-            <div class="experience-company">HARP Research, Inc.</div>
-            <div class="experience-description">
-                <ul>
-                    <li>Developed a Python script to evaluate approximation error between Reduced Order Models,
-                        efficiently comparing over 10,000 nodes and returning results in seconds.</li>
-                        
-                    <li>Built a Docker-based containerized environment for multiphysics software and Python development,
-                         reducing onboarding and setup time by 50%.</li>
-                    <li>Conducted in depth literature review and Contributed findings to a formal paper on Topology Optimization Methods to guide future research directions.</li>
-                </ul>
-            </div>
-        </div>
+        <h2><span class="keyword">def</span> <span class="function">work</span>(<span class="variable">self</span>):</h2>
 
         <div class="experience-item">
             <div class="experience-header">
                 <span class="experience-title">ML and Backend Developer</span>
                 <span class="experience-date">Fall 2025 - Present</span>
+                
             </div>
             <div class="experience-company">Rensselaer Center for Open Source</div>
+            <div class="experience-location">Troy, NY</div>
             <div class="experience-description">
                 <ul>
                     <li>Spearheaded Frontend and played a major role in backend development on
@@ -221,23 +42,76 @@
             </div>
         </div>
 
-        <h2>Education</h2>
-
+        
         <div class="experience-item">
             <div class="experience-header">
-                <span class="experience-title">B.S. Computer Science</span>
-                <span class="experience-date">2023 - 2027</span>
+                <span class="experience-title">Research Technology Intern</span>
+                <span class="experience-date">Summer 2025</span>
             </div>
-            <div class="experience-company">Rensselaer Polytechnic Institute</div>
+            <div class="experience-company">HARP Research, Inc.</div>
+            <div class="experience-location">Troy, NY (Hybrid)</div>
+            
             <div class="experience-description">
+                <ul>
+                    <li>Developed a Python script to evaluate approximation error between Reduced Order Models,
+                        efficiently comparing over 10,000 nodes and returning results in seconds.</li>
+                        
+                        <li>Built a Docker-based containerized environment for multiphysics software and Python development,
+                            reducing onboarding and setup time by 50%.</li>
+                            <li>Conducted in depth literature review and Contributed findings to a formal paper on Topology Optimization Methods to guide future research directions.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <span class="experience-title"> IT Assistant</span>
+                        <span class="experience-date">Summer 2023 </span>
+                    </div>
+                    <div class="experience-company">Veterans Association</div>
+                    <div class="experience-location">Bedford, MA</div>
+                    <div class="experience-description">
+                        <ul>
+                            <li>Designed and implemented an automated barcode scanning system, streamlining the medication inventory process and increasing operational speed by 200%.</li>
+                            <li>Identified $10,000+ in returned drug credit through systematic database matching and expiration tracking.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <span class="experience-title">Python Instructor</span>
+                        <span class="experience-date">Fall 2025 - Present</span>
+                        
+                    </div>
+                    <div class="experience-company">coding&&community</div>
+                    <div class="experience-location">Troy, NY</div>
+                    <div class="experience-description">
+                        <ul>
+                            <li>Teach and curate weekly python lessons to underprivileged 7-12th graders through NY STEP  (Science and Tech Entry Program)</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+               
+                <h2><span class="keyword">def</span> <span class="function">education</span>(<span class="variable">self</span>):</h2>
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <span class="experience-title">B.S. Computer Science | Minor in Cognitive Science of A.I</span>
+                        <span class="experience-date">2024 - 2028</span>
+                    </div>
+                    <div class="experience-company">Rensselaer Polytechnic Institute</div>
+                    <div class="experience-description">
                 <p>Concentration in Machine Learning and Data Science</p>
                 <ul>
-                    <li>Relevant Coursework: Data Structures, Algorithms, Machine Learning, Database Systems</li>
+                    <li>Relevant Coursework: Data Structures & Algorithms, Discrete Math, Computer Architecture, Operating Systems, Multivariable Calculus & Matrix Algebra, Computer Science 1, Computational Biology</li>
                 </ul>
             </div>
         </div>
 
-        <h2>Skills</h2>
+        <h2><span class="keyword">def</span> <span class="function">skills</span>(<span class="variable">self</span>):</h2>
 
         <div class="skills-container">
             <span class="skill-tag">Python</span>
