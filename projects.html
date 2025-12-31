@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="projects.css">
     <title>Projects | Gavin</title>
 </head>
 <body class="dark-mode">
@@ -13,13 +14,106 @@
         <a href="projects.html">projects</a>
         <a href="photography.html">photography</a>
         <a href="contact.html">contact</a>
-        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" title="why...?">☀️</button>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" title="don't even think about it">☀️</button>
     </nav>
-    <main>
-        <h1><span class="keyword">class</span> <span class="type">Projects</span>:</h1>
 
+    <main class="projects-main">
+        <h1 class="keyword">Projects</h1>
 
+        <div class="project-card">
+            <div class="project-carousel">
+                <div class="carousel-images">
+                    <img src="images/digitalOC-1.png" alt="DigitalOC Screenshot 1" class="carousel-img active">
+                    <img src="images/digitalOC-2.png" alt="DigitalOC Screenshot 2" class="carousel-img">
+                    <img src="images/digitalOC-3.png" alt="DigitalOC Screenshot 3" class="carousel-img">
+                    <img src="images/digitalOC-4.jpg" alt="DigitalOC Screenshot 4" class="carousel-img">
+                </div>
+                <button class="carousel-btn prev" onclick="changeSlide(this, -1)">‹</button>
+                <button class="carousel-btn next" onclick="changeSlide(this, 1)">›</button>
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="goToSlide(this, 0)"></span>
+                    <span class="dot" onclick="goToSlide(this, 1)"></span>
+                    <span class="dot" onclick="goToSlide(this, 2)"></span>
+                    <span class="dot" onclick="goToSlide(this, 3)"></span>
+                </div>
+            </div>
+            <div class="project-content">
+                <h2 class="project-name">DigitalOC</h2>
+                <p class="project-tagline">Full stack ML-powered NFL play prediction system</p>
+                <p class="project-description">
+                    Over the course of the Fall '25 semester my team and I developed DigitalOC from the ground up.
+                    We pulled and filtered over 40,00 in-game situations and stats from the past 4 seasons using pandas.
+                    Our data was then fed into a series of Scikit-Learn Random Forest models achieving a 91.7% accuracy on run/pass play predictions.
+                    Finally, a React.js frontend paired with Flask API calls provides a seamless and aesthetic user interface.
+                    I learned so much about Full-stack development, collaboration, version control, and the overall product building experience!
+                </p>
+                <div class="project-tags">
+                    <span class="project-tag">Python</span>
+                    <span class="project-tag">React.js</span>
+                    <span class="project-tag">Flask</span>
+                    <span class="project-tag">Scikit-Learn</span>
+                    <span class="project-tag">html/css</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/nworobec/digitalOC" class="project-link" target="_blank" rel="noopener noreferrer">GitHub →</a>
+                </div>
+            </div>
+        </div>
+
+        
     </main>
 
+    <script>
+        // Load saved theme on page load
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const btn = document.querySelector('.theme-toggle');
+            if (savedTheme === 'light') {
+                document.body.classList.remove('dark-mode');
+                btn.textContent = '🌑';
+            } else {
+                document.body.classList.add('dark-mode');
+                btn.textContent = '☀️';
+            }
+        })();
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const btn = document.querySelector('.theme-toggle');
+            const isDark = document.body.classList.contains('dark-mode');
+            btn.textContent = isDark ? '☀️' : '🌑';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+
+        // Carousel functionality
+        function changeSlide(btn, direction) {
+            const carousel = btn.closest('.project-carousel');
+            const images = carousel.querySelectorAll('.carousel-img');
+            const dots = carousel.querySelectorAll('.dot');
+            
+            let currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+            images[currentIndex].classList.remove('active');
+            dots[currentIndex].classList.remove('active');
+            
+            currentIndex += direction;
+            if (currentIndex >= images.length) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = images.length - 1;
+            
+            images[currentIndex].classList.add('active');
+            dots[currentIndex].classList.add('active');
+        }
+
+        function goToSlide(dot, index) {
+            const carousel = dot.closest('.project-carousel');
+            const images = carousel.querySelectorAll('.carousel-img');
+            const dots = carousel.querySelectorAll('.dot');
+            
+            dots.forEach(d => d.classList.remove('active'));
+            images.forEach(img => img.classList.remove('active'));
+            
+            images[index].classList.add('active');
+            dots[index].classList.add('active');
+        }
+    </script>
 </body>
 </html>

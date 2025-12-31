@@ -1,3 +1,3 @@
 # Gavin Cheung
 
-Check out my website [GitHub website](gavinc1225/gavinc1225.github.io "Personal Portfolio").
+Check out my website: [https://gavinc1225.github.io/](https://gavinc1225.github.io/ "Personal Portfolio").
