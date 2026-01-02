@@ -3,10 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="blog.css">
+    <title>Blog | Gavin</title>
 </head>
-<body>
+<body class="dark-mode">
+    <nav>
+        <a href="index.html">home</a>
+        <a href="experience.html">experience</a>
+        <a href="projects.html">projects</a>
+        <a href="blog.html">blog</a>
+        <a href="contact.html">contact</a>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" title="don't even think about it">☀️</button>
+    </nav>
 
-    
+    <main class="blog-main">
+        <h1><span class="keyword">class</span> <span class="type">Photos</span>:</h1>
+
+        <div class="photo-grid">
+            <div class="photo-item">
+                <img src="photos\IMG_0379.JPG">
+                <p class="photo-caption">sunrise hike at camels hump in vermont</p>
+            </div>
+
+            <div class="photo-item">
+                <img src="photos\IMG_9634.PNG">
+                <p class="photo-caption">what I listen to when I study</p>
+            </div>
+
+            <div class="photo-item">
+                <img src="photos\IMG_8585.JPG" alt="Photo 3">
+                <p class="photo-caption">presenting at RCOS expo with my team!</p>
+            </div>
+
+
+            <div class="photo-item">
+                <img src="photos\IMG_9722.JPG" alt="Photo 3">
+                <p class="photo-caption">learning how to play mahjong over break</p>
+            </div>
+
+            <!-- Photo 1 -->
+            <div class="photo-item">
+                <img src="photos\IMG_9541.JPG" alt="Photo 1">
+                <p class="photo-caption">campus can be really pretty sometimes!</p>
+            </div>
+
+            <div class="photo-item">
+                <img src="photos\IMG_3078.JPG">
+                <p class = "photo-caption">polaroid with the guys</p>
+            </div>
+
+            <!-- Photo 2 -->
+            <div class="photo-item">
+                <img src="photos\IMG_9552.JPG" alt="Photo 2">
+                <p class="photo-caption">at my friends music showcase </p>
+            </div>
+            <div class="photo-item">
+                <img src="photos\IMG_8768.JPG">
+                <p class="photo-caption">got a 50/50 on my CS HW and was really excited</p>
+            </div>
+
+            <!-- Photo 3 -->
+            <div class="photo-item">
+                <img src="photos\IMG_8870.JPG" alt="Photo 3">
+                <p class="photo-caption">enjoying the sunset with my friend and some guitar</p>
+            </div>
+
+            <div class="photo-item">
+                <img src="photos\IMG_7754.JPG">
+                <p class="photo-caption">belaying my friend!</p>
+            </div>
+
+            <div class="photo-item">
+                <img src="photos\IMG_0839.JPG">
+                <p class="photo-caption">visiting japanese temple</p>
+            </div>
+
+
+        </div>
+    </main>
+
+    <script>
+        // Load saved theme on page load
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const btn = document.querySelector('.theme-toggle');
+            if (savedTheme === 'light') {
+                document.body.classList.remove('dark-mode');
+                btn.textContent = '🌑';
+            } else {
+                document.body.classList.add('dark-mode');
+                btn.textContent = '☀️';
+            }
+        })();
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const btn = document.querySelector('.theme-toggle');
+            const isDark = document.body.classList.contains('dark-mode');
+            btn.textContent = isDark ? '☀️' : '🌑';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+    </script>
 </body>
 </html>

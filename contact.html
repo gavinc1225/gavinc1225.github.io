@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Contact | Gavin</title>
+</head>
+<body class="dark-mode">
+    <nav>
+        <a href="index.html">home</a>
+        <a href="experience.html">experience</a>
+        <a href="projects.html">projects</a>
+        <a href="blog.html">blog</a>
+        <a href="contact.html">contact</a>
+        <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode" title="don't even think about it">☀️</button>
+    </nav>
+
+    <main>
+        <h1><span class="keyword">class</span> <span class="type">Contact</span>:</h1>
+
+        <div class="contact-links">
+            <p><span class="variable">linkedin</span> <span class="keyword">=</span> <a href="https://linkedin.com/in/gavcheung" target="_blank" rel="noopener noreferrer"><span class="string">"linkedin.com/in/gavcheung"</span></a></p>
+            <p><span class="variable">github</span> <span class="keyword">=</span> <a href="https://github.com/gavinc1225" target="_blank" rel="noopener noreferrer"><span class="string">"github.com/gavinc1225"</span></a></p>
+            <p><span class="variable">email</span> <span class="keyword">=</span> <a href="mailto:gavin.cheung12@gmail.com"><span class="string">"gavin.cheung12@gmail.com"</span></a></p>
+        </div>
+    </main>
+
+    <script>
+        // Load saved theme on page load
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const btn = document.querySelector('.theme-toggle');
+            if (savedTheme === 'light') {
+                document.body.classList.remove('dark-mode');
+                btn.textContent = '🌑';
+            } else {
+                document.body.classList.add('dark-mode');
+                btn.textContent = '☀️';
+            }
+        })();
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const btn = document.querySelector('.theme-toggle');
+            const isDark = document.body.classList.contains('dark-mode');
+            btn.textContent = isDark ? '☀️' : '🌑';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+    </script>
+</body>
+</html>

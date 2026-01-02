@@ -308,13 +308,14 @@ li {
 }
 
 .footer-links a {
-    color: var(--text-color);
-    transition: transform 0.2s;
+    color: var(--muted-color);
+    transition: color 0.2s, transform 0.2s;
     display: flex;
     align-items: center;
 }
 
 .footer-links a:hover {
+    color: var(--text-color);
     transform: translateY(-2px);
 }
 
@@ -328,14 +329,46 @@ li {
 }
 
 .footer-license a {
-    color: var(--text-color);
+    color: var(--muted-color);
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 0.4rem;
+    transition: color 0.2s;
+}
+
+.footer-license a:hover {
+    color: var(--text-color);
 }
 
 .footer-license svg {
     width: 16px;
     height: 16px;
+}
+
+/* Contact Links */
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: transform 0.2s;
+}
+
+.contact-item:hover {
+    transform: translateX(5px);
+    text-decoration: none;
+}
+
+.contact-item svg {
+    flex-shrink: 0;
 }
