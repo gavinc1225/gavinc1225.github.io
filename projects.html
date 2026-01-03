@@ -23,10 +23,10 @@
         <div class="project-card">
             <div class="project-carousel">
                 <div class="carousel-images">
-                    <img src="images/digitalOC-1.png" alt="DigitalOC Screenshot 1" class="carousel-img active">
-                    <img src="images/digitalOC-2.png" alt="DigitalOC Screenshot 2" class="carousel-img">
-                    <img src="images/digitalOC-3.png" alt="DigitalOC Screenshot 3" class="carousel-img">
-                    <img src="images/digitalOC-4.jpg" alt="DigitalOC Screenshot 4" class="carousel-img">
+                    <img src="images/digitalOCImgs/digitalOC-1.png" alt="DigitalOC Screenshot 1" class="carousel-img active">
+                    <img src="images/digitalOCImgs/digitalOC-2.png" alt="DigitalOC Screenshot 2" class="carousel-img">
+                    <img src="images/digitalOCImgs/digitalOC-3.png" alt="DigitalOC Screenshot 3" class="carousel-img">
+                    <img src="images/digitalOCImgs/digitalOC-4.jpg" alt="DigitalOC Screenshot 4" class="carousel-img">
                 </div>
                 <button class="carousel-btn prev" onclick="changeSlide(this, -1)">‹</button>
                 <button class="carousel-btn next" onclick="changeSlide(this, 1)">›</button>
@@ -41,11 +41,12 @@
                 <h2 class="project-name">DigitalOC</h2>
                 <p class="project-tagline">Full stack ML-powered NFL play prediction system</p>
                 <p class="project-description">
-                    Over the course of the Fall '25 semester my team and I developed DigitalOC from the ground up.
-                    We pulled and filtered over 40,00 in-game situations and stats from the past 4 seasons using pandas.
-                    Our data was then fed into a series of Scikit-Learn Random Forest models achieving a 91.7% accuracy on run/pass play predictions.
-                    Finally, a React.js frontend paired with Flask API calls provides a seamless and aesthetic user interface.
-                    I learned so much about Full-stack development, collaboration, version control, and the overall product building experience!
+                    Over the course of the Fall '25 semester, my team and I developed DigitalOC from the ground up.<br><br>
+                    • Collected and processed <strong>40,000+ in-game situations</strong> and stats from the past 4 NFL seasons using Pandas<span class="sm-br"></span>
+                    • Trained <strong>Scikit-Learn Random Forest models</strong> achieving <strong>91.7% accuracy</strong> on run/pass play predictions<span class="sm-br"></span>
+                    • Built a <strong>React.js frontend</strong> with a clean, intuitive UI for real-time play predictions<span class="sm-br"></span>
+                    • Developed a <strong>Flask REST API</strong> backend to serve model predictions with low-latency responses<span class="sm-br"></span>
+                    • Gained hands-on experience with <strong>full-stack development</strong>, team collaboration, and version control (Git)
                 </p>
                 <div class="project-tags">
                     <span class="project-tag">Python</span>
@@ -58,6 +59,47 @@
                     <a href="https://github.com/nworobec/digitalOC" class="project-link" target="_blank" rel="noopener noreferrer">GitHub →</a>
                 </div>
             </div>
+        </div>
+
+        <div class="project-card">
+            <div class="project-carousel carousel-tall">
+                <div class="carousel-images">
+                    <img src="images/PharmaSchedulerIMGs/pharmaScheudler1.png" class="carousel-img active">
+                    <img src="images/PharmaSchedulerIMGs/ps2.png" class="carousel-img">
+                    <img src="images/PharmaSchedulerIMGs/ps3.png" class="carousel-img">
+                    <img src="images/PharmaSchedulerIMGs/ps4.png" class="carousel-img">
+                </div>
+                <button class="carousel-btn prev" onclick="changeSlide(this, -1)">‹</button>
+                <button class="carousel-btn next" onclick="changeSlide(this, 1)">›</button>
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="goToSlide(this, 0)"></span>
+                    <span class="dot" onclick="goToSlide(this, 1)"></span>
+                    <span class="dot" onclick="goToSlide(this, 2)"></span>
+                    <span class="dot" onclick="goToSlide(this, 3)"></span>
+                </div>
+            </div>
+            <div class="project-content">
+                <h2 class="project-name">PharmaSched</h2>
+                <p class="project-tagline">Automated scheduling system for pharmacies</p>
+                <p class="project-description">
+                    Over dinner, I asked my Mom (who works at a pharmacy), if she had any redundant, time consuming tasks.
+                    She mentioned that she spent several hours curating the monthly work schedule for each of the 5 departments.<span class="sm-br"></span>
+                    So I made PharmaSched... (she came up with the name)<br><br>
+                    • Built a <strong>lightweight scheduling solution</strong> that reduced monthly schedule creation time from 4+ hours to under 10 minutes<span class="sm-br"></span>
+                    • Developed a <strong>React frontend</strong> with Tailwind CSS for a clean, responsive UI across 5 department views<span class="sm-br"></span>
+                    • Implemented a <strong>TypeScript backend</strong> with type-safe data handling and validation<span class="sm-br"></span>
+                    • Utilized a <strong>local JSON database</strong> for easy data sharing and syncing between pharmacy workstations—no server required<span class="sm-br"></span>
+                    • Optimized for <strong>fast load times (&lt;500ms)</strong> and minimal memory footprint (~50MB)<span class="sm-br"></span>
+                    • Supports scheduling for <strong>20+ employees</strong> across multiple shifts with conflict detection
+                </p>
+                <div class="project-tags">
+                    <span class="project-tag">React.js</span>
+                    <span class="project-tag">Tailwind</span>
+                    <span class="project-tag">Vite</span>
+                    <span class="project-tag">HTML</span>
+                    <span class="project-tag">TypeScript</span>
+                </div>
+
         </div>
 
         

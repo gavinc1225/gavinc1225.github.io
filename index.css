@@ -372,3 +372,124 @@ li {
 .contact-item svg {
     flex-shrink: 0;
 }
+
+/* Photo styling */
+.photo-item {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Intro contact wrapper - side by side layout */
+.intro-contact-wrapper {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.cover-photo {
+    flex-shrink: 0;
+}
+
+.cover-photo img {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Quick contact section */
+.quick-contact {
+    flex: 1;
+    min-width: 200px;
+}
+
+.connect-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.connect-label {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--link-color);
+    text-decoration: none;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.85rem;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.social-link:hover {
+    background-color: var(--link-color);
+    color: var(--bg-color);
+}
+
+.chat-label {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.email-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.email-form input,
+.email-form textarea {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    padding: 0.75rem;
+    border: 1px solid var(--muted-color);
+    border-radius: 6px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    resize: vertical;
+}
+
+.email-form input:focus,
+.email-form textarea:focus {
+    outline: none;
+    border-color: var(--link-color);
+}
+
+.email-form button {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--link-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.email-form button:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+    .intro-contact-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .quick-contact {
+        width: 100%;
+        text-align: center;
+    }
+}
