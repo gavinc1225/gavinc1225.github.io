@@ -1,0 +1,17 @@
+# Pages
+thanksfor100k.html
+
+# Images and photos
+images/
+photos/
+graphic-design-imgs/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.bmp
+*.heic
+*.PNG
+*.JPG
+*.JPEG
